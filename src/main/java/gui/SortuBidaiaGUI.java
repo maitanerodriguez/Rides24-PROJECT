@@ -1,6 +1,7 @@
 package gui;
 
 import java.text.DateFormat;
+
 import java.util.*;
 import java.util.List;
 
@@ -21,12 +22,6 @@ import domain.Ride;
 import exceptions.RideAlreadyExistException;
 import exceptions.RideMustBeLaterThanTodayException;
 import exceptions.moreThanCarSeatsException;
-
-import javax.swing.GroupLayout.Alignment;
-import net.miginfocom.swing.MigLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
 
 public class SortuBidaiaGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
