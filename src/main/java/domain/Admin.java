@@ -26,3 +26,4 @@ public class Admin extends User implements Serializable{
 		super(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
 	}
 }
+//proba 
