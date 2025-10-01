@@ -1,0 +1,372 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 15:29:16 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 9408@IVAN
+
+[2025-05-02 15:29:16 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 15:29:16 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 15:29:16 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 15:29:16 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 15:29:16 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 15:29:16 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 15:29:16 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 15:29:16 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 15:29:16 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 15:29:16 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 15:29:16 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 15:29:16 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 15:29:16 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 15:29:16 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 15:29:16 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 15:29:16 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 15:29:16 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 15:29:16 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 15:29:16 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 15:30:48 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 18784@IVAN
+
+[2025-05-02 15:30:48 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 15:30:48 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 15:30:48 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 15:30:48 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 15:30:48 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 15:30:48 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 15:30:48 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 15:30:48 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 15:30:48 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 15:30:48 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 15:30:48 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 15:30:48 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 15:30:48 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 15:30:48 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 15:30:48 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 15:30:48 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 15:30:48 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 15:30:48 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 15:30:48 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 15:33:13 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 9220@IVAN
+
+[2025-05-02 15:33:13 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 15:33:13 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 15:33:13 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 15:33:13 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 15:33:13 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 15:33:13 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 15:33:13 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 15:33:13 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 15:33:13 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 15:33:13 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 15:33:13 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 15:33:13 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 15:33:13 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 15:33:13 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 15:33:13 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 15:33:13 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 15:33:13 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 15:33:13 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 15:33:13 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 15:35:43 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 17948@IVAN
+
+[2025-05-02 15:35:43 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 15:35:43 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 15:35:43 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 15:35:43 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 15:35:43 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 15:35:43 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 15:35:43 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 15:35:43 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 15:35:43 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 15:35:43 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 15:35:43 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 15:35:43 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 15:35:43 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 15:35:43 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 15:35:43 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 15:35:43 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 15:35:43 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 15:35:43 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 15:35:43 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 18:20:30 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 20068@IVAN
+
+[2025-05-02 18:20:30 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 18:20:30 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 18:20:30 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 18:20:30 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 18:20:30 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 18:20:30 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 18:20:30 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 18:20:30 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 18:20:30 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 18:20:30 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 18:20:30 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 18:20:30 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 18:20:30 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 18:20:30 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 18:20:30 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 18:20:30 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 18:20:30 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 18:20:30 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 18:20:30 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-02 18:48:15 #1 store] 
+Database 'C:\IVAN_INGENIERITZA_INFORMATIKOA\2024-2025\2.Kuatrimestrea\IS\proiektua\priala\2.ITERAZIOA(WEB ZERBITZU GABE)\Rides24\src\main\resources\rides.temp' is opened by 3792@IVAN
+
+[2025-05-02 18:48:15 #2 type.registry] 
+New type domain.User
+
+[2025-05-02 18:48:15 #3 type.registry] 
+New type domain.Driver
+
+[2025-05-02 18:48:15 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-05-02 18:48:15 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-05-02 18:48:15 #6 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-02 18:48:15 #7 type.registry] 
+New type domain.Kotxe
+
+[2025-05-02 18:48:15 #8 type.registry] 
+New type domain.Ride
+
+[2025-05-02 18:48:15 #9 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-05-02 18:48:15 #10 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-05-02 18:48:15 #11 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-02 18:48:15 #12 type.registry] 
+New type domain.Book
+
+[2025-05-02 18:48:15 #13 type] 
+Type domain.Book is not enhanced.
+
+[2025-05-02 18:48:15 #14 type.registry] 
+New type domain.Traveler
+
+[2025-05-02 18:48:15 #15 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-05-02 18:48:15 #16 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-05-02 18:48:15 #17 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-05-02 18:48:15 #18 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-05-02 18:48:15 #19 type.registry] 
+New type java.util.Vector<domain.Kotxe>
+
+[2025-05-02 18:48:15 #20 type.registry] 
+New type java.util.Vector<domain.Book>
+

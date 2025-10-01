@@ -1,0 +1,35 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-10 10:42:27 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 2716@IVAN
+
+[2025-03-10 10:42:27 #2 type.registry] 
+New type domain.User
+
+[2025-03-10 10:42:27 #3 type.registry] 
+New type domain.Driver
+
+[2025-03-10 10:42:27 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-03-10 10:42:27 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-10 10:42:27 #6 type.registry] 
+New type domain.Ride
+
+[2025-03-10 10:42:27 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-10 10:42:27 #8 type.registry] 
+New type domain.Traveler
+
+[2025-03-10 10:42:27 #9 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-03-10 10:42:27 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-10 10:42:27 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+

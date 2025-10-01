@@ -1,0 +1,560 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 10:43:35 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 8688@IVAN
+
+[2025-02-17 10:43:35 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 10:43:35 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 10:43:35 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 10:43:35 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 10:43:35 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 10:43:35 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 10:48:22 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 4908@IVAN
+
+[2025-02-17 10:48:22 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 10:48:22 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 10:48:22 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 10:48:22 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 10:48:22 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 10:48:22 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 10:51:00 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 11840@IVAN
+
+[2025-02-17 10:51:01 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 10:51:01 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 10:51:01 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 10:51:01 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 10:51:01 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 10:51:01 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 10:57:48 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 17548@IVAN
+
+[2025-02-17 10:57:48 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 10:57:48 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 10:57:48 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 10:57:48 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 10:57:48 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 10:57:48 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:01:47 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 8496@IVAN
+
+[2025-02-17 11:01:47 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:01:47 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:01:47 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:01:47 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:01:47 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:01:47 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:01:48 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:01:48 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:07:14 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 14196@IVAN
+
+[2025-02-17 11:07:14 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:07:14 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:07:14 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:07:14 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:07:14 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:07:14 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:07:15 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:07:15 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:07:58 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 18200@IVAN
+
+[2025-02-17 11:07:58 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:07:58 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:07:58 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:07:58 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:07:58 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:07:58 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:07:59 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:07:59 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:10:03 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 13120@IVAN
+
+[2025-02-17 11:10:03 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:10:03 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:10:03 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:10:04 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:10:04 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:10:04 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:10:04 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:10:04 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:10:24 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 11048@IVAN
+
+[2025-02-17 11:10:24 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:10:24 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:10:24 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:10:24 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:10:24 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:10:24 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:10:26 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:10:26 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:12:34 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 18288@IVAN
+
+[2025-02-17 11:12:34 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:12:34 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:12:34 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:12:34 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:12:35 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:12:35 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:12:35 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:12:35 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:14:25 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 17548@IVAN
+
+[2025-02-17 11:14:25 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:14:25 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:14:25 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:14:25 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:14:25 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:14:25 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:14:28 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:14:28 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:15:46 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 16004@IVAN
+
+[2025-02-17 11:15:46 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:15:46 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:15:46 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:15:46 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:15:46 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:15:46 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:15:47 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:15:47 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:19:42 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 17188@IVAN
+
+[2025-02-17 11:19:43 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:19:43 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:19:43 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:19:43 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:19:43 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:19:43 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:23:30 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 14824@IVAN
+
+[2025-02-17 11:23:30 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:23:30 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:23:30 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:23:30 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:23:30 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:23:30 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-02-17 11:23:31 #8 type.registry] 
+New type domain.User
+
+[2025-02-17 11:23:31 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:24:18 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 17188@IVAN
+
+[2025-02-17 11:24:18 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:24:18 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:24:18 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:24:18 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:24:18 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:24:18 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:41:04 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 11356@IVAN
+
+[2025-02-17 11:41:04 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:41:04 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:41:04 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:41:04 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:41:04 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:41:04 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:43:45 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 5240@IVAN
+
+[2025-02-17 11:43:45 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:43:45 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:43:45 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:43:45 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:43:45 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:43:45 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:44:43 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 11752@IVAN
+
+[2025-02-17 11:44:43 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:44:43 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:44:43 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:44:43 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:44:43 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:44:43 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:45:09 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 14472@IVAN
+
+[2025-02-17 11:45:09 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:45:09 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:45:09 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:45:09 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:45:09 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:45:09 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:47:26 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 4420@IVAN
+
+[2025-02-17 11:47:26 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:47:26 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:47:26 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:47:26 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:47:26 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:47:26 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 11:47:36 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 15728@IVAN
+
+[2025-02-17 11:47:36 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 11:47:36 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 11:47:36 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 11:47:36 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 11:47:36 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 11:47:36 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-17 18:47:24 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 2144@IVAN
+
+[2025-02-17 18:47:24 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-17 18:47:24 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-17 18:47:24 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-17 18:47:24 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-17 18:47:24 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-17 18:47:24 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+

@@ -1,0 +1,69 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-10 10:38:16 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 20448@IVAN
+
+[2025-02-10 10:38:16 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-10 10:38:16 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-10 10:38:16 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-10 10:38:16 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-10 10:38:16 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-10 10:38:16 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-10 11:15:50 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 17632@IVAN
+
+[2025-02-10 11:15:50 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-10 11:15:50 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-10 11:15:50 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-10 11:15:50 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-10 11:15:50 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-10 11:15:50 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-02-10 11:16:19 #1 store] 
+Database 'C:\Users\ipria\git\Rides24\src\main\resources\rides.temp' is opened by 11720@IVAN
+
+[2025-02-10 11:16:19 #2 type.registry] 
+New type domain.Driver
+
+[2025-02-10 11:16:19 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-02-10 11:16:19 #4 type.registry] 
+New type domain.Ride
+
+[2025-02-10 11:16:19 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-02-10 11:16:19 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-02-10 11:16:19 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
