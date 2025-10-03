@@ -42,6 +42,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/IVAN_INGENIERITZA_INFORMATIKOA/2024-2025/2.Kuatrimestrea/IS/laborategiak/lab3/objectdb-2.6.9/objectdb-2.6.9/bin/objectdb.jar"/>
+	<classpathentry kind="lib" path="lib/objectdb.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
