@@ -5,6 +5,7 @@ import java.util.Date;
 import configuration.ConfigXML;
 import domain.Driver;
 import domain.Ride;
+import domain.Traveler;
 
 public class TestBusinessLogic {
 	TestDataAccess dbManagerTest;
@@ -61,6 +62,36 @@ public class TestBusinessLogic {
 			Ride r=dbManagerTest.removeRide( email, from,  to,  date );
 			dbManagerTest.close();
 			return r;
+		}
+		public boolean existTraveler(String NAN) {
+			dbManagerTest.open();
+			boolean b=dbManagerTest.existTraveler(NAN);
+			dbManagerTest.close();
+			return b;
+		}
+		public Traveler createTraveler(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua) {
+			dbManagerTest.open();
+			Traveler traveler=dbManagerTest.createTraveler(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
+			dbManagerTest.close();
+			return traveler;
+		}
+		public boolean removeTraveler(String travelerNAN) {
+			dbManagerTest.open();
+			boolean b=dbManagerTest.removeTraveler(travelerNAN);
+			dbManagerTest.close();
+			return b;
+	    }
+		public Traveler addTravelerWithAlert(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, String from, String to,  Date date) {
+			dbManagerTest.open();
+			Traveler traveler=dbManagerTest.addTravelerWithAlert(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua, from, to, date);
+			dbManagerTest.close();
+			return traveler;
+		}
+		public boolean existAlert(String NAN, String from, String to, Date date) {
+			dbManagerTest.open();
+			boolean b=dbManagerTest.existAlert(NAN, from, to, date);
+			dbManagerTest.close();
+			return b;
 		}
 		
 
