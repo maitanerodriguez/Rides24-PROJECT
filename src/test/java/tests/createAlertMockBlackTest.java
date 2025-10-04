@@ -11,13 +11,16 @@ import static org.mockito.Mockito.when;
 import java.text.SimpleDateFormat;
 
 import javax.persistence.EntityManager;
-
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-
+import javax.persistence.Persistence;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import dataAccess.DataAccess;
@@ -28,27 +31,39 @@ import exceptions.alertAlreadyExists;
 
 public class createAlertMockBlackTest {
 
-	private EntityManager db;
-	private EntityTransaction m;
-	private DataAccess sut;
+static DataAccess sut;
 	
+	protected MockedStatic <Persistence> persistenceMock;
+
+	@Mock
+	protected  EntityManagerFactory entityManagerFactory;
+	@Mock
+	protected  EntityManager db;
+	@Mock
+    protected  EntityTransaction  et;
 	
-	@Before 
-	public void setUp() { 
-		db = mock(EntityManager.class);
-		m = mock(EntityTransaction.class);
-		MockitoAnnotations.openMocks(this);
-		when(db.getTransaction()).thenReturn(m);
-		sut = new DataAccess(db);
-		sut.open();
+
+	@Before
+    public  void init() {
+        MockitoAnnotations.openMocks(this);
+        persistenceMock = Mockito.mockStatic(Persistence.class);
+		persistenceMock.when(() -> Persistence.createEntityManagerFactory(Mockito.any()))
+        .thenReturn(entityManagerFactory);
+        
+        Mockito.doReturn(db).when(entityManagerFactory).createEntityManager();
+		Mockito.doReturn(et).when(db).getTransaction();
+	    sut=new DataAccess(db);
+
+
 		
-    
-	}  
-	
-	@After  
-	public void tearDown() {  
-		sut.close();    
-	}
+    }
+	@After
+    public  void tearDown() {
+		persistenceMock.close();
+
+
+		
+    }
 	
 	 @Test
 	    public void test1() throws Exception {

@@ -12,6 +12,7 @@ import configuration.ConfigXML;
 import domain.Driver;
 import domain.Kotxe;
 import domain.Ride;
+import domain.Traveler;
 
 
 public class TestDataAccess {
@@ -140,7 +141,70 @@ public class TestDataAccess {
 			return null;
 
 		}
+		
+		public boolean existTraveler(String NAN) {
+			 return  db.find(Driver.class, NAN)!=null;
+			 
 
+		}
+		
+		public Traveler createTraveler(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua) {
+			System.out.println(">> TestDataAccess: createTraveler");
+			Traveler traveler=null;
+				db.getTransaction().begin();
+				try {
+				    traveler=new Traveler(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
+					db.persist(traveler);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return traveler;
+	    }
+
+		public boolean removeTraveler(String travelerNAN) {
+			System.out.println(">> TestDataAccess: removeTraveler");
+			Traveler t = db.find(Traveler.class, travelerNAN);
+			if (t!=null) {
+				db.getTransaction().begin();
+				db.remove(t);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		
+		public Traveler addTravelerWithAlert(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, String from, String to,  Date date) {
+			System.out.println(">> TestDataAccess: addTravelerWhitAlert");
+				Traveler traveler=null;
+				db.getTransaction().begin();
+				try {
+					 traveler = db.find(Traveler.class, email);
+					 					 
+					if (traveler==null)
+						traveler=new Traveler(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
+				    traveler.addAlert(from, to, date);
+				    db.persist(traveler);
+				    System.out.println("Stored: "+traveler);
+					db.getTransaction().commit();
+					return traveler;
+					
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return traveler;
+	    }
+		
+		public boolean existAlert(String NAN, String from, String to, Date date) {
+			System.out.println(">> TestDataAccess: existAlert");
+			Traveler t = db.find(Traveler.class, NAN);
+			if (t!=null) {
+				return t.doesAlertExist(from, to, date);
+			} else 
+			return false;
+		}
 
 		
 }
