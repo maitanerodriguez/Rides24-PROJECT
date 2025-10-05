@@ -46,6 +46,11 @@ public class createBalorazioWhiteTestBD {
        	    sut.close();
        	    
        	    assertNull(b);
+       	    
+       	    testDA.open();
+			boolean exist=testDA.existBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+			assertTrue(!exist);
+			testDA.close();
 
        	    } catch (reviewAlreadyExistsException e) {
        	    	fail();
@@ -86,13 +91,19 @@ public class createBalorazioWhiteTestBD {
         Kotxe k = testDA.createKotxe("1234ABC", "Toyota", "Corolla", 5, d);
         Traveler traveler = testDA.createTraveler("12345678A", "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
         Ride ride = testDA.createRide(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
-        Balorazio balorazio = testDA.addBalorazioWith(idBalorazioa, puntuazioa, komentarioa, data, rideNumber, NAN);
+        rideNumber = testDA.addRideNumberWithBalorazio(idBalorazioa, puntuazioa, komentarioa, data, rideNumber, NAN);
         testDA.close();
        	
        	try {
        		sut.open();
        	    b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
        	    sut.close();
+       	    
+       	    testDA.open();
+			boolean exist=testDA.existBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+			assertTrue(!exist);
+			testDA.close();
+       	    
 
        	    } catch (reviewAlreadyExistsException e) {
        	    	assertTrue(true);
@@ -124,6 +135,11 @@ public class createBalorazioWhiteTestBD {
        		sut.open();
        	    b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
        	    sut.close();
+       	    
+       	    testDA.open();
+			boolean exist=testDA.existBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+			assertTrue(!exist);
+			testDA.close();
 
        	    } catch (reviewAlreadyExistsException e) {
        	    	fail();
@@ -172,6 +188,12 @@ public class createBalorazioWhiteTestBD {
 	       	sut.close();
 
 	       	assertNotNull(b);
+	       	
+	       	testDA.open();
+			boolean exist=testDA.existBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+			assertTrue(exist);
+			testDA.close();
+
 
 	    } catch (reviewAlreadyExistsException e) {
 	       	fail();

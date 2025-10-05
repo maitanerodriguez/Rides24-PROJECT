@@ -207,7 +207,7 @@ public class TestDataAccess {
 			return false;
 		}
 		
-		public Balorazio addBalorazioWith(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Integer rideNumber, String NAN) {
+		public Integer addRideNumberWithBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Integer rideNumber, String NAN) {
 			Traveler t = null;
 			Balorazio b = null;
 
@@ -236,7 +236,7 @@ public class TestDataAccess {
 				e.printStackTrace();
 			}
 
-			return b;
+			return rideNumber;
 		}
 		
 		public Balorazio createBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Ride ride, Traveler traveler) {
@@ -320,7 +320,12 @@ public class TestDataAccess {
 			return false;
 	    }
 		
-		
-
-		
+		public boolean existBalorazio(Integer idBalorazio, int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) {
+			System.out.println(">> TestDataAccess: existBalorazio");
+			Traveler t = db.find(Traveler.class, NAN);
+			if (t!=null) {
+				return t.balorazioExist(rideNumber);
+			} else 
+			return false;
+		}		
 }

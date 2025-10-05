@@ -5,6 +5,7 @@ import java.util.Date;
 import configuration.ConfigXML;
 import domain.Balorazio;
 import domain.Driver;
+import domain.Kotxe;
 import domain.Ride;
 import domain.Traveler;
 
@@ -109,8 +110,47 @@ public class TestBusinessLogic {
 		    return removed;
 		}
 		
+		public Integer addRideNumberWithBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Integer rideNumber, String NAN) {
+			dbManagerTest.open();
+			Integer rNumber = dbManagerTest.addRideNumberWithBalorazio(idBalorazioa, puntuazioa, komentarioa, data, rideNumber, NAN);
+			dbManagerTest.close();
+			return rNumber;
+		}
 		
 		
-
-
+		public Ride createRide(Integer rideNumber, String from, String to, Date date, int nPlaces, float price, Driver driver, Kotxe k) {
+			dbManagerTest.open();
+			Ride ride = dbManagerTest.createRide(rideNumber, from, to, date, nPlaces, price, driver, k);
+			dbManagerTest.close();
+			return ride;
+	    }
+	
+		public boolean removeRide(Integer rideNumber) {
+			dbManagerTest.open();
+		    boolean removed = dbManagerTest.removeBalorazio(rideNumber);
+		    dbManagerTest.close();
+		    return removed;
+	    }
+		
+		public Kotxe createKotxe(String matrikula, String marka, String modeloa, int eserlekuKopurua, Driver driver) {
+			dbManagerTest.open();
+			Kotxe kotxe = dbManagerTest.createKotxe(matrikula, marka, modeloa, eserlekuKopurua, driver);
+			dbManagerTest.close();
+			return kotxe;
+	    }
+		
+		public boolean removeKotxe(String matrikula, String marka, String modeloa, int eserlekuKopurua, Driver driver) {
+			dbManagerTest.open();
+			boolean removed = dbManagerTest.removeKotxe(matrikula);
+			dbManagerTest.close();
+			return removed;
+	    }
+		
+		
+		public boolean existBalorazio(Integer idBalorazio, int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) {
+			dbManagerTest.open();
+			boolean exist = dbManagerTest.existBalorazio(idBalorazio, puntuazioa, komentarioa, data, NAN, rideNumber);
+			dbManagerTest.close();
+			return exist;
+		}
 }

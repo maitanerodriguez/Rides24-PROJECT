@@ -812,7 +812,7 @@ public void open(){
 				db.getTransaction().commit();
 				throw new ratingMoreThanFiveException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ratingMoreThanFiveException"));
 			}
-			Balorazio b=t.addBalorazio(puntuazioa, komentarioa, data, r);
+			Balorazio b=t.addBalorazio(idBalorazio, puntuazioa, komentarioa, data, r);
 			r.addBalorazio(b);
 			db.getTransaction().commit();
 			return b;
