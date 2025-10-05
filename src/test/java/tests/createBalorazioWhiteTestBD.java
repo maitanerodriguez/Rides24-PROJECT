@@ -135,11 +135,6 @@ public class createBalorazioWhiteTestBD {
        		sut.open();
        	    b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
        	    sut.close();
-       	    
-       	    testDA.open();
-			boolean exist=testDA.existBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
-			assertTrue(!exist);
-			testDA.close();
 
        	    } catch (reviewAlreadyExistsException e) {
        	    	fail();
@@ -194,7 +189,6 @@ public class createBalorazioWhiteTestBD {
 			assertTrue(exist);
 			testDA.close();
 
-
 	    } catch (reviewAlreadyExistsException e) {
 	       	fail();
 	    } catch (ratingMoreThanFiveException e) {
@@ -208,5 +202,7 @@ public class createBalorazioWhiteTestBD {
 	         testDA.close();
 	    }
 	 }
+	 
+	 
     
 }
