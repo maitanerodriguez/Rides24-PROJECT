@@ -1,20 +1,27 @@
 package tests;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 
 import dataAccess.DataAccess;
 import domain.Balorazio;
@@ -22,93 +29,274 @@ import domain.Driver;
 import domain.Kotxe;
 import domain.Ride;
 import domain.Traveler;
+import exceptions.RideAlreadyExistException;
+import exceptions.RideMustBeLaterThanTodayException;
 import exceptions.ratingMoreThanFiveException;
 import exceptions.reviewAlreadyExistsException;
 
 public class createBalorazioBlackMockTest {
 	
-    private EntityManager db;
-    private EntityTransaction m;
-    private DataAccess sut;
+	static DataAccess sut;
 	
-    @Before
-    public void setUp() {
-        db = mock(EntityManager.class);
-        m = mock(EntityTransaction.class);
-        MockitoAnnotations.openMocks(this);
-        when(db.getTransaction()).thenReturn(m);
-        sut = new DataAccess(db);
-        sut.open();
-    }
+	protected MockedStatic<Persistence> persistenceMock;
 
-    @After
-    public void tearDown() {
-        sut.close();
+	@Mock
+	protected  EntityManagerFactory entityManagerFactory;
+	@Mock
+	protected  EntityManager db;
+	@Mock
+    protected  EntityTransaction  et;
+	
+
+	@Before
+    public  void init() {
+        MockitoAnnotations.openMocks(this);
+        persistenceMock = Mockito.mockStatic(Persistence.class);
+		persistenceMock.when(() -> Persistence.createEntityManagerFactory(Mockito.any()))
+        .thenReturn(entityManagerFactory);
+        
+        Mockito.doReturn(db).when(entityManagerFactory).createEntityManager();
+		Mockito.doReturn(et).when(db).getTransaction();
+	    sut=new DataAccess(db);
     }
+	@After
+    public  void tearDown() {
+		persistenceMock.close();
+    }
+	
+    @Test
+	 public void test1() {	
+		Integer idBalorazioa = 345;
+	    int puntuazioa = 5;
+	    String komentarioa = "Ondo";
+	    String data = "02/01/2025";
+	    
+	    String NAN = "12345678A";
+	    Integer rideNumber = 12;
+	       	
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Date rideDate = null;
+	    try {
+	   		rideDate = sdf.parse("05/06/2025");
+	   	} catch (ParseException e) {
+	   		e.printStackTrace();
+	    }
+	    
+	    Driver d = new Driver("Z9988776K", "driver1", "789", "driver1@gmail.com", "Jon", "Arrieta", "10/11/1985", 634567890, "male");
+	    Kotxe k = new Kotxe("1234ABC", "Toyota", "Corolla", 5, d);
+	    Traveler traveler = new Traveler("12345678A", "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
+	    Ride ride = new Ride(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
+	       	
+	    Balorazio b = null;
+	    
+	    Mockito.when(db.find(Driver.class, d.getNAN())).thenReturn(d);
+	    Mockito.when(db.find(Kotxe.class, k.getMatrikula())).thenReturn(k);
+	    Mockito.when(db.find(Traveler.class, traveler.getNAN())).thenReturn(traveler);
+	    Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+
+	    try {
+	    	sut.open();
+	       	b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+	       	sut.close();
+
+	       	assertNotNull(b);
+
+	    } catch (reviewAlreadyExistsException e) {
+	       	fail();
+	    } catch (ratingMoreThanFiveException e) {
+	       	 fail();
+	    } catch (Exception e) {
+	       	 e.printStackTrace();
+	       	 fail();
+	    } 
+	 }
     
     @Test
-    public void test1() throws Exception {
-    	Mockito.when(db.find(Traveler.class, null)).thenReturn(null);
-    	Mockito.when(db.find(Ride.class, 10)).thenReturn(null);
+	 public void test2() {	
+    	Integer idBalorazioa = 345;
+	    int puntuazioa = 5;
+	    String komentarioa = "Ondo";
+	    String data = "02/01/2025";
 
-        Balorazio result = sut.createBalorazio(8, "Ondo", "02/01/2025", null, 10);
-        assertNull(result);
-    }
+	    String NAN = null;
+	    Integer rideNumber = 12;
+	    
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Date rideDate = null;
+	    try {
+	   		rideDate = sdf.parse("05/06/2025");
+	   	} catch (ParseException e) {
+	   		e.printStackTrace();
+	    }
+	     
+	    Driver d = new Driver("Z9988776K", "driver1", "789", "driver1@gmail.com", "Jon", "Arrieta", "10/11/1985", 634567890, "male");
+	    Kotxe k = new Kotxe("1234ABC", "Toyota", "Corolla", 5, d);
+	    Traveler traveler = new Traveler(NAN, "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
+	    Ride ride = new Ride(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
+	       	
+	    Balorazio b = null;
+	    
+	    Mockito.when(db.find(Driver.class, d.getNAN())).thenReturn(d);
+	    Mockito.when(db.find(Kotxe.class, k.getMatrikula())).thenReturn(k);
+	    Mockito.when(db.find(Traveler.class, traveler.getNAN())).thenReturn(traveler);
+	    Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
+	    try {
+	    	sut.open();
+	       	b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+	       	sut.close();
+
+	       	assertNull(b);
+
+	    } catch (reviewAlreadyExistsException e) {
+	       	fail();
+	    } catch (ratingMoreThanFiveException e) {
+	       	 fail();
+	    } catch (Exception e) {
+	       	 e.printStackTrace();
+	       	 fail();
+	    } 
+	 }
+    
     @Test
-    public void test2() throws Exception {
-    	Mockito.when(db.find(Traveler.class, "12345678A")).thenReturn(null);
-    	Mockito.when(db.find(Ride.class, -1)).thenReturn(null);
-    	
-        Balorazio result = sut.createBalorazio(8, "Ondo", "02/01/2025", "12345678A", -1);
-        assertNull(result);
-    }
+	 public void test3() {	
+    	Integer idBalorazioa = 345;
+	    int puntuazioa = 5;
+	    String komentarioa = "Ondo";
+	    String data = "02/01/2025";
 
+	    String NAN = "12345678A";
+	    Integer rideNumber = -1;
+	    
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Date rideDate = null;
+	    try {
+	   		rideDate = sdf.parse("05/06/2025");
+	   	} catch (ParseException e) {
+	   		e.printStackTrace();
+	    }
+	     
+	    Driver d = new Driver("Z9988776K", "driver1", "789", "driver1@gmail.com", "Jon", "Arrieta", "10/11/1985", 634567890, "male");
+	    Kotxe k = new Kotxe("1234ABC", "Toyota", "Corolla", 5, d);
+	    Traveler traveler = new Traveler(NAN, "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
+	    Ride ride = new Ride(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
+	       	
+	    Balorazio b = null;
+	    
+	    Mockito.when(db.find(Driver.class, d.getNAN())).thenReturn(d);
+	    Mockito.when(db.find(Kotxe.class, k.getMatrikula())).thenReturn(k);
+	    Mockito.when(db.find(Traveler.class, traveler.getNAN())).thenReturn(traveler);
+	    Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+
+	    try {
+	    	sut.open();
+	       	b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+	       	sut.close();
+
+	       	assertNull(b);
+
+	    } catch (reviewAlreadyExistsException e) {
+	       	fail();
+	    } catch (ratingMoreThanFiveException e) {
+	       	 fail();
+	    } catch (Exception e) {
+	       	 e.printStackTrace();
+	       	 fail();
+	    } 
+	 }
+    
     @Test
-    public void test3() throws Exception {
-    	Traveler t = mock(Traveler.class);
-        Ride r = mock(Ride.class);
+	 public void test4() {	
+    	Integer idBalorazioa = 345;
+	    int puntuazioa = 5;
+	    String komentarioa = "Ondo";
+	    String data = "02/01/2025";
 
-        Mockito.when(db.find(Traveler.class, "12345678A")).thenReturn(t);
-        Mockito.when(db.find(Ride.class, 12)).thenReturn(r);
-        
-        try {
-            sut.createBalorazio(8, "Ondo", "02/01/2025", "12345678A", 12);
-        } catch (reviewAlreadyExistsException e) {
-            assertTrue(true);
-        } catch (Exception e) {
-        	 e.printStackTrace();
-        }
-    }
+	    String NAN = "12345678A";
+	    Integer rideNumber = 12;
+	    
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Date rideDate = null;
+	    try {
+	   		rideDate = sdf.parse("05/06/2025");
+	   	} catch (ParseException e) {
+	   		e.printStackTrace();
+	    }
+	     
+	    Driver d = new Driver("Z9988776K", "driver1", "789", "driver1@gmail.com", "Jon", "Arrieta", "10/11/1985", 634567890, "male");
+	    Kotxe k = new Kotxe("1234ABC", "Toyota", "Corolla", 5, d);
+	    Traveler traveler = new Traveler(NAN, "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
+	    Ride ride = new Ride(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
+	       	
+	    traveler.addBalorazio(idBalorazioa, puntuazioa, komentarioa, data, ride);
+	    
+	    Balorazio b = null;
+	    
+	    Mockito.when(db.find(Driver.class, d.getNAN())).thenReturn(d);
+	    Mockito.when(db.find(Kotxe.class, k.getMatrikula())).thenReturn(k);
+	    Mockito.when(db.find(Traveler.class, traveler.getNAN())).thenReturn(traveler);
+	    Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
+	    try {
+	    	sut.open();
+	       	b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+	       	sut.close();
+
+	    } catch (reviewAlreadyExistsException e) {
+	       	assertTrue(true);
+	    } catch (ratingMoreThanFiveException e) {
+	       	 fail();
+	    } catch (Exception e) {
+	       	 e.printStackTrace();
+	       	 fail();
+	    } 
+	 }
+    
     @Test
-    public void test4() throws Exception {
-        Traveler t = mock(Traveler.class);
-        Ride r = mock(Ride.class);
+	 public void test5() {	
+    	Integer idBalorazioa = 345;
+	    int puntuazioa = 8;
+	    String komentarioa = "Ondo";
+	    String data = "02/01/2025";
 
-        Mockito.when(db.find(Traveler.class, "12345678A")).thenReturn(t);
-        Mockito.when(db.find(Ride.class, 12)).thenReturn(r);
-        Mockito.when(t.balorazioExist(12)).thenReturn(false);
+	    String NAN = "12345678A";
+	    Integer rideNumber = 12;
+	    
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Date rideDate = null;
+	    try {
+	   		rideDate = sdf.parse("05/06/2025");
+	   	} catch (ParseException e) {
+	   		e.printStackTrace();
+	    }
+	     
+	    Driver d = new Driver("Z9988776K", "driver1", "789", "driver1@gmail.com", "Jon", "Arrieta", "10/11/1985", 634567890, "male");
+	    Kotxe k = new Kotxe("1234ABC", "Toyota", "Corolla", 5, d);
+	    Traveler traveler = new Traveler(NAN, "traveler1", "123", "traveler1@gmail.com", "Ibai", "Martin", "01/02/1997", 612332456, "male" );
+	    Ride ride = new Ride(rideNumber, "Donostia", "Bilbo", rideDate, 4, 30.00f, d, k);
+	       	
+	    
+	    Balorazio b = null;
+	    
+	    Mockito.when(db.find(Driver.class, d.getNAN())).thenReturn(d);
+	    Mockito.when(db.find(Kotxe.class, k.getMatrikula())).thenReturn(k);
+	    Mockito.when(db.find(Traveler.class, traveler.getNAN())).thenReturn(traveler);
+	    Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
 
-        try {
-            sut.createBalorazio(2, "Ondo", "02/01/2025", "12345678A", 12);
-        } catch (ratingMoreThanFiveException e) {
-            assertTrue(true);
-        } catch (Exception e) {
-        	 e.printStackTrace();
-        }
-    }
+	    try {
+	    	sut.open();
+	       	b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, NAN, rideNumber);
+	       	sut.close();
 
-    @Test
-    public void test5() throws Exception {
-        Traveler t1 = mock(Traveler.class);
-        Ride r = mock(Ride.class);
-        Balorazio b1 = mock(Balorazio.class);
-
-        Mockito.when(db.find(Traveler.class, "23567123H")).thenReturn(t1);
-        Mockito.when(db.find(Ride.class, 12)).thenReturn(r);
-        Mockito.when(t1.balorazioExist(12)).thenReturn(false);
-        Mockito.when(t1.addBalorazio(8, "Ondo", "01/01/2025", r)).thenReturn(b1);
-
-    }
+	    } catch (reviewAlreadyExistsException e) {
+	    	fail();
+	    } catch (ratingMoreThanFiveException e) {
+	       	assertTrue(true);
+	    } catch (Exception e) {
+	       	 e.printStackTrace();
+	       	 fail();
+	    } 
+	 }
+    
+    
 }

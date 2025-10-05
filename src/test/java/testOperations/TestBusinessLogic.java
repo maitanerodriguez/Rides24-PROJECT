@@ -3,6 +3,7 @@ package testOperations;
 import java.util.Date;
 
 import configuration.ConfigXML;
+import domain.Balorazio;
 import domain.Driver;
 import domain.Ride;
 import domain.Traveler;
@@ -93,6 +94,22 @@ public class TestBusinessLogic {
 			dbManagerTest.close();
 			return b;
 		}
+		
+		public Balorazio createBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Ride ride, Traveler traveler) {
+			dbManagerTest.open();
+			Balorazio balorazio = dbManagerTest.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, ride, traveler);
+			dbManagerTest.close();
+			return balorazio;
+		}
+		
+		public boolean removeBalorazio(Integer idBalorazioa) {
+		    dbManagerTest.open();
+		    boolean removed = dbManagerTest.removeBalorazio(idBalorazioa);
+		    dbManagerTest.close();
+		    return removed;
+		}
+		
+		
 		
 
 

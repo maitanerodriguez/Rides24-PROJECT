@@ -120,8 +120,8 @@ public class Traveler extends User implements Serializable {
 		}
 		return false;
 	}
-	public Balorazio addBalorazio(int puntuazio, String komentario, String data, Ride ride) {
-		Balorazio b=new Balorazio(puntuazio, komentario, data, ride, this);
+	public Balorazio addBalorazio(Integer idBalorazio, int puntuazio, String komentario, String data, Ride ride) {
+		Balorazio b=new Balorazio(idBalorazio, puntuazio, komentario, data, ride, this);
 		this.balorazioak.add(b);
 		return b;
 	}

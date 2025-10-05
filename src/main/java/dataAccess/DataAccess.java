@@ -799,7 +799,7 @@ public void open(){
 
 		}
 	}
-	public Balorazio createBalorazio(int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException{
+	public Balorazio createBalorazio(Integer idBalorazio, int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException{
 		try {
 			db.getTransaction().begin();
 			Traveler t= db.find(Traveler.class,NAN );

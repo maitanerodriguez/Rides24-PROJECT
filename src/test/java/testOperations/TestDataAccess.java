@@ -9,6 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import configuration.ConfigXML;
+import domain.Balorazio;
 import domain.Driver;
 import domain.Kotxe;
 import domain.Ride;
@@ -205,6 +206,121 @@ public class TestDataAccess {
 			} else 
 			return false;
 		}
+		
+		public Balorazio addBalorazioWith(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Integer rideNumber, String NAN) {
+			Traveler t = null;
+			Balorazio b = null;
+
+			try {
+				db.getTransaction().begin();
+				t = db.find(Traveler.class, NAN);
+				Ride r = db.find(Ride.class, rideNumber);
+
+				if (t == null || r == null) {
+					db.getTransaction().commit();
+					return null;
+				}
+
+				if (t.balorazioExist(rideNumber)) {
+					db.getTransaction().commit();
+					return null; 
+				}
+
+				b = t.addBalorazio(idBalorazioa, puntuazioa, komentarioa, data, r);
+				r.addBalorazio(b);
+
+				db.persist(t);
+				db.getTransaction().commit();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			return b;
+		}
+		
+		public Balorazio createBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Ride ride, Traveler traveler) {
+			System.out.println(">> TestDataAccess: createBalorazio");
+			Balorazio balorazio = null;
+				db.getTransaction().begin();
+				try {
+				    balorazio = new Balorazio(idBalorazioa, puntuazioa, komentarioa, data, ride, traveler);
+					db.persist(balorazio);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return balorazio;
+	    }
+	
+		public boolean removeBalorazio(Integer idBalorazioa) {
+			System.out.println(">> TestDataAccess: removeBalorazio");
+			Balorazio b = db.find(Balorazio.class, idBalorazioa);
+			if (b!=null) {
+				db.getTransaction().begin();
+				db.remove(b);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		
+		public Ride createRide(Integer rideNumber, String from, String to, Date date, int nPlaces, float price, Driver driver, Kotxe k) {
+			System.out.println(">> TestDataAccess: createRide");
+			Ride ride = null;
+				db.getTransaction().begin();
+				try {
+				    ride = new Ride(rideNumber, from, to, date, nPlaces, price, driver, k);
+					db.persist(ride);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return ride;
+	    }
+	
+		public boolean removeRide(Integer rideNumber) {
+			System.out.println(">> TestDataAccess: removeRide");
+			Ride r = db.find(Ride.class, rideNumber);
+			if (r!=null) {
+				db.getTransaction().begin();
+				db.remove(r);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		
+		public Kotxe createKotxe(String matrikula, String marka, String modeloa, int eserlekuKopurua, Driver driver) {
+			System.out.println(">> TestDataAccess: createKotxe");
+			Kotxe kotxe= null;
+				db.getTransaction().begin();
+				try {
+				    kotxe= new Kotxe(matrikula, marka, modeloa, eserlekuKopurua, driver);
+					db.persist(kotxe);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return kotxe;
+	    }
+		
+		public boolean removeKotxe(String matrikula) {
+			System.out.println(">> TestDataAccess: removeKotxe");
+			Kotxe k = db.find(Kotxe.class, matrikula);
+			if (k!=null) {
+				db.getTransaction().begin();
+				db.remove(k);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		
+		
 
 		
 }
