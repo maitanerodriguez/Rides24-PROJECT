@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Vector;
@@ -22,11 +23,11 @@ public class Driver extends User implements Serializable  {
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private List<Ride> rides=new Vector<Ride>();
+	private List<Ride> rides=new ArrayList<>();
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private List<Kotxe> kotxeak=new Vector<Kotxe>();
+	private List<Kotxe> kotxeak=new ArrayList<>();
 	
 	public Driver() {
 		super();
@@ -92,10 +93,12 @@ public class Driver extends User implements Serializable  {
 		Ride r=null;
 		while (!found && index<=rides.size()) {
 			r=rides.get(++index);
-			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date)) )
-			found=true;
-		}
+			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date)) ) {
+				found=true;
+			}
 			
+		}
+			 
 		if (found) {
 			rides.remove(index);
 			return r;

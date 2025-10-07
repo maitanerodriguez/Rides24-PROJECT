@@ -4,7 +4,9 @@ import java.util.Date;
 
 import configuration.ConfigXML;
 import domain.Driver;
+import domain.Kotxe;
 import domain.Ride;
+import domain.Traveler;
 
 public class TestBusinessLogic {
 	TestDataAccess dbManagerTest;
@@ -42,6 +44,12 @@ public class TestBusinessLogic {
 			return existDriver;
 
 		}
+		public boolean existTraveler(String NAN) {
+			dbManagerTest.open();
+			boolean existTraveler=dbManagerTest.existTraveler(NAN);
+			dbManagerTest.close();
+			return existTraveler;
+		}
 		
 		public Driver addDriverWithRide(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, String from, String to,  Date date, int nPlaces, float price, String matrikula) {
 			dbManagerTest.open();
@@ -49,6 +57,12 @@ public class TestBusinessLogic {
 			dbManagerTest.close();
 			return driver;
 
+		}
+		public Traveler addTravelerWithRide(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, int nSeats, Integer rideNumber,String from, String to,  Date date, int nPlaces, float price, Kotxe k, Driver d) {
+			dbManagerTest.open();
+			Traveler traveler=dbManagerTest.addTravelerWithRide(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua, nSeats, rideNumber, from, to, date, nPlaces, price, k, d);
+			dbManagerTest.close();
+			return traveler;
 		}
 		public boolean existRide(String email, String from, String to, Date date) {
 			dbManagerTest.open();

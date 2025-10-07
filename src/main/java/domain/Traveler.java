@@ -128,8 +128,9 @@ public class Traveler extends User implements Serializable {
 	public List<Balorazio> getBalorazioak(){
 		return this.balorazioak;
 	}
-	public void removeBook(Book b) {
+	public Book removeBook(Book b) {
 		this.getBookListb().remove(b);
+		return b;
 	}
 	public void removeBooks() {
 		for(Book b: books){
@@ -142,6 +143,25 @@ public class Traveler extends User implements Serializable {
 			
 		}
 	}
+	public Book removeBookWithRideID(Integer rideNumber) {
+		int i=0;
+		int indizea=0;
+		Book book=null;
+		Boolean aurkitua=false;
+		for(Book b: books) {
+			Ride r= b.getRide();
+			if(r.getRideNumber()==rideNumber) {
+				book=b;
+				indizea=i;
+				aurkitua=true;
+			}
+			i++;
+		}
+		if(aurkitua==true) {
+			books.remove(indizea);
+		}
+		return book;
+	}
 	public void removeBalorazioak() {
 		for(Balorazio b: balorazioak) {
 			Ride r=b.getRide();
@@ -152,6 +172,7 @@ public class Traveler extends User implements Serializable {
 	public void removeReview(Balorazio b) {
 		this.balorazioak.remove(b);
 	}
+	
 	/**
 	public void removeAlerts() {
 		for(Alerta a: alertak) {

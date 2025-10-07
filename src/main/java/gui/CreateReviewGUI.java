@@ -121,11 +121,7 @@ public class CreateReviewGUI extends JFrame {
 					Balorazio balorazio=facade.createBalorazio(puntuazio, deskribapena,dataOrduaFormateatuta,t.getNAN(),r.getRideNumber());
 					errore.setBounds(116, 195, 317,20);
 					errore.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateReviewGUI.ratingCreated"));
-				}catch(reviewAlreadyExistsException e1) {
-					errore.setBounds(69, 195, 317,20);
-					errore.setForeground(Color.RED);
-			    	errore.setText(e1.getMessage());
-				}catch(ratingMoreThanFiveException e1) {
+				}catch(reviewAlreadyExistsException | ratingMoreThanFiveException e1) {
 					errore.setBounds(69, 195, 317,20);
 					errore.setForeground(Color.RED);
 			    	errore.setText(e1.getMessage());

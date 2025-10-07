@@ -96,7 +96,7 @@ public class CreateRideMockTest {
 		String rideTo="Zarautz";
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Date rideDate=null;;
+		Date rideDate=null;
 		try {
 			rideDate = sdf.parse("05/10/2025");
 		} catch (ParseException e) {
@@ -218,7 +218,7 @@ public class CreateRideMockTest {
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}	
+				}
 				
 				
 				Mockito.when(db.find(Driver.class, null)).thenThrow(IllegalArgumentException.class);

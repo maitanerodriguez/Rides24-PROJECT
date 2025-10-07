@@ -111,14 +111,14 @@ public class DataAccess  {
 		   int year=today.get(Calendar.YEAR);
 		   if (month==12) { month=1; year+=1;}  
 	    
-		   
+		   String sexGizona="Gizona";
 		    //Create drivers 
-			User driver1=new Driver("Y234G1","11", "99","driver1@gmail.com","Pedrerol", "Fernandez", "30/10/1989", 1,"Gizona");
-			User driver2=new Driver("Y234G2","22", "33","driver12@gmail.com","Iker", "Fernandez", "30/10/1989", 2,"Gizona");
-			User traveler1=new Traveler("Y234G3","33", "44","driver13@gmail.com","Pedro", "Fernandez", "30/10/1989", 3,"Gizona");
-			User traveler2=new Traveler("Y234G4","44", "55","driver14@gmail.com","Messi", "Fernandez", "30/10/1989", 4,"Gizona");
-			User traveler3=new Traveler("Y234G45","88", "99","driver14@gmail.com","Aitor", "Fernandez", "30/10/1989", 4,"Gizona");
-			User admin1=new Admin ("Y234G458","admin", "admin","admin14@gmail.com","Admin", "Admin", "30/10/1989", 4,"Gizona");
+			User driver1=new Driver("Y234G1","11", "99","driver1@gmail.com","Pedrerol", "Fernandez", "30/10/1989", 1,sexGizona);
+			User driver2=new Driver("Y234G2","22", "33","driver12@gmail.com","Iker", "Fernandez", "30/10/1989", 2,sexGizona);
+			User traveler1=new Traveler("Y234G3","33", "44","driver13@gmail.com","Pedro", "Fernandez", "30/10/1989", 3,sexGizona);
+			User traveler2=new Traveler("Y234G4","44", "55","driver14@gmail.com","Messi", "Fernandez", "30/10/1989", 4,sexGizona);
+			User traveler3=new Traveler("Y234G45","88", "99","driver14@gmail.com","Aitor", "Fernandez", "30/10/1989", 4,sexGizona);
+			User admin1=new Admin ("Y234G458","admin", "admin","admin14@gmail.com","Admin", "Admin", "30/10/1989", 4,sexGizona);
 			
 			Traveler traveler33=(Traveler) traveler3;
 			Traveler traveler22=(Traveler) traveler2;
@@ -211,15 +211,15 @@ public class DataAccess  {
 	 * @throws RideMustBeLaterThanTodayException if the ride date is before today 
  	 * @throws RideAlreadyExistException if the same ride already exists for the driver
 	 */
-	public Ride createRide(String from, String to, Date date, int nPlaces, float price, String NAN, String matrikula) throws  RideAlreadyExistException, RideMustBeLaterThanTodayException,moreThanCarSeatsException {
-		System.out.println(">> DataAccess: createRide=> from= "+from+" to= "+to+" driver="+NAN+" date "+date);
+	public Ride createRide(String from, String to, Date date, int nPlaces, float price, String nan, String matrikula) throws  RideAlreadyExistException, RideMustBeLaterThanTodayException,moreThanCarSeatsException {
+		System.out.println(">> DataAccess: createRide=> from= "+from+" to= "+to+" driver="+nan+" date "+date);
 		try {
 			if(new Date().compareTo(date)>0) {
 				throw new RideMustBeLaterThanTodayException(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.ErrorRideMustBeLaterThanToday"));
 			}
 			db.getTransaction().begin();
 			
-			Driver driver = db.find(Driver.class,NAN );
+			Driver driver = db.find(Driver.class,nan );
 			Kotxe k=db.find(Kotxe.class, matrikula);
 			if (driver.doesRideExists(from, to, date)) {
 				db.getTransaction().commit();
@@ -239,6 +239,9 @@ public class DataAccess  {
 			return ride;
 		} catch (NullPointerException e) {
 			// TODO Auto-generated catch block
+			db.getTransaction().commit();
+			return null;
+		}catch(IllegalArgumentException e) {
 			db.getTransaction().commit();
 			return null;
 		}
