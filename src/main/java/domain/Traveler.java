@@ -159,6 +159,24 @@ public class Traveler extends User implements Serializable {
 		}
 	}
 	*/
-
+	public Book removeBookWithRideID(Integer rideNumber) {
+		int i=0;
+		int indizea=0;
+		Book book=null;
+		Boolean aurkitua=false;
+		for(Book b: books) {
+			Ride r= b.getRide();
+			if(r.getRideNumber()==rideNumber) {
+				book=b;
+				indizea=i;
+				aurkitua=true;
+			}
+			i++;
+		}
+		if(aurkitua==true) {
+			books.remove(indizea);
+		}
+		return book;
+	}
 }	
 

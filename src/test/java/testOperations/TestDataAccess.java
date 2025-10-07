@@ -10,6 +10,7 @@ import javax.persistence.Persistence;
 
 import configuration.ConfigXML;
 import domain.Balorazio;
+import domain.Book;
 import domain.Driver;
 import domain.Kotxe;
 import domain.Ride;
@@ -327,5 +328,61 @@ public class TestDataAccess {
 				return t.balorazioExist(rideNumber);
 			} else 
 			return false;
-		}		
+		}	
+		public boolean removeCarFromDB(String matrikula) {
+			System.out.println(">> TestDataAccess: removeCarFromDB");
+			Kotxe k = db.find(Kotxe.class, matrikula);
+			if (k!=null) {
+				db.getTransaction().begin();
+				db.remove(k);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		public boolean existBook(String NAN, Ride r) {
+			System.out.println(">> TestDataAccess: existBook");
+			Traveler t= db.find(Traveler.class, NAN);
+			if(t!=null) {
+				return t.existBook(r);
+			}else {
+				return false;
+			}
+		}
+		public Traveler addTravelerWithRide(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, int nSeats, Integer rideNumber,String from, String to,  Date date, int nPlaces, float price, Kotxe k, Driver d) {
+			System.out.println(">> TestDataAccess: addTravelerWithRide");
+			Traveler traveler=null;
+			Ride ride=null;
+			db.getTransaction().begin();
+			try {
+				traveler=db.find(Traveler.class, NAN);
+				ride=db.find(Ride.class,rideNumber);
+				if(traveler==null) {
+					traveler=new Traveler(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
+				}
+				if(ride==null) {
+					ride = new Ride(from, to, date, nPlaces, price, d, k);
+				}
+				traveler.addBook(ride, nSeats);
+				db.persist(traveler);
+				System.out.println("Stored: "+traveler);
+				db.getTransaction().commit();
+				return traveler;
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			return traveler;
+		}
+		public Book removeBookFromTraveler(String NAN, Integer rideNumber) {
+			System.out.println(">> TestDataAccess: removeRideFromTraveler");
+			Traveler t= db.find(Traveler.class, NAN);
+			if(t!=null) {
+				db.getTransaction().begin();
+				Book b=t.removeBookWithRideID(rideNumber);
+				db.getTransaction().commit();
+				return b;
+			}else {
+				return null;
+			}
+		}
 }
