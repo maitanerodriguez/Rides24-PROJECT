@@ -32,7 +32,12 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/IVAN_INGENIERITZA_INFORMATIKOA/2024-2025/2.Kuatrimestrea/IS/laborategiak/lab3/objectdb-2.6.9/objectdb-2.6.9/bin/objectdb.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-25"/>
+=======
+	<classpathentry kind="lib" path="lib/objectdb.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+>>>>>>> 86c3915c58355aa4f81d424c98af32d64bc5300c
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

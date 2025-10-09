@@ -1,0 +1,249 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-04 11:26:42 #1 store] 
+Database 'C:\Users\Usuario\git\Rides24-PROJECT\src\main\resources\rides.temp' is opened by 28852@LAPTOP-3EOMPR7J
+
+[2025-10-04 11:26:42 #2 type.registry] 
+New type domain.User
+
+[2025-10-04 11:26:42 #3 type.registry] 
+New type domain.Driver
+
+[2025-10-04 11:26:42 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-10-04 11:26:42 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-10-04 11:26:42 #6 type.registry] 
+New type domain.Erreklamazio
+
+[2025-10-04 11:26:42 #7 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-04 11:26:42 #8 type.registry] 
+New type domain.Kotxe
+
+[2025-10-04 11:26:42 #9 type.registry] 
+New type domain.Ride
+
+[2025-10-04 11:26:42 #10 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-10-04 11:26:42 #11 type] 
+Type domain.Erreklamazio is not enhanced.
+
+[2025-10-04 11:26:42 #12 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-10-04 11:26:42 #13 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-04 11:26:42 #14 type.registry] 
+New type domain.Balorazio
+
+[2025-10-04 11:26:42 #15 type.registry] 
+New type domain.Book
+
+[2025-10-04 11:26:42 #16 type] 
+Type domain.Balorazio is not enhanced.
+
+[2025-10-04 11:26:42 #17 type.registry] 
+New type domain.Traveler
+
+[2025-10-04 11:26:42 #18 type] 
+Type domain.Book is not enhanced.
+
+[2025-10-04 11:26:42 #19 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-10-04 11:26:42 #20 type.registry] 
+New type domain.Alerta
+
+[2025-10-04 11:26:42 #21 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-10-04 11:26:42 #22 type.registry] 
+New type domain.Admin
+
+[2025-10-04 11:26:42 #23 type] 
+Type domain.Admin is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-04 11:32:52 #1 store] 
+Database 'C:\Users\Usuario\git\Rides24-PROJECT\src\main\resources\rides.temp' is opened by 10268@LAPTOP-3EOMPR7J
+
+[2025-10-04 11:32:52 #2 type.registry] 
+New type domain.User
+
+[2025-10-04 11:32:52 #3 type.registry] 
+New type domain.Driver
+
+[2025-10-04 11:32:52 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-10-04 11:32:52 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-10-04 11:32:52 #6 type.registry] 
+New type domain.Erreklamazio
+
+[2025-10-04 11:32:52 #7 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-04 11:32:52 #8 type.registry] 
+New type domain.Kotxe
+
+[2025-10-04 11:32:52 #9 type.registry] 
+New type domain.Ride
+
+[2025-10-04 11:32:52 #10 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-10-04 11:32:52 #11 type] 
+Type domain.Erreklamazio is not enhanced.
+
+[2025-10-04 11:32:52 #12 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-10-04 11:32:52 #13 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-04 11:32:52 #14 type.registry] 
+New type domain.Balorazio
+
+[2025-10-04 11:32:52 #15 type.registry] 
+New type domain.Book
+
+[2025-10-04 11:32:52 #16 type] 
+Type domain.Balorazio is not enhanced.
+
+[2025-10-04 11:32:52 #17 type.registry] 
+New type domain.Traveler
+
+[2025-10-04 11:32:52 #18 type] 
+Type domain.Book is not enhanced.
+
+[2025-10-04 11:32:52 #19 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-10-04 11:32:52 #20 type.registry] 
+New type domain.Alerta
+
+[2025-10-04 11:32:52 #21 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-10-04 11:32:52 #22 type.registry] 
+New type domain.Admin
+
+[2025-10-04 11:32:52 #23 type] 
+Type domain.Admin is not enhanced.
+
+[2025-10-04 11:32:52 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-10-04 11:32:52 #25 type.registry] 
+New type java.util.Vector<domain.Erreklamazio>
+
+[2025-10-04 11:32:52 #26 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-10-04 11:32:52 #27 type.registry] 
+New type java.util.Vector<domain.Book>
+
+[2025-10-04 11:32:52 #28 type.registry] 
+New type java.util.Vector<domain.Alerta>
+
+[2025-10-04 11:32:52 #29 type.registry] 
+New type java.util.Vector<domain.Balorazio>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-04 13:29:18 #1 store] 
+Database 'C:\Users\Usuario\git\Rides24-PROJECT\src\main\resources\rides.temp' is opened by 2692@LAPTOP-3EOMPR7J
+
+[2025-10-04 13:29:18 #2 type.registry] 
+New type domain.User
+
+[2025-10-04 13:29:18 #3 type.registry] 
+New type domain.Driver
+
+[2025-10-04 13:29:18 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-10-04 13:29:18 #5 type.registry] 
+New type domain.Mugimendua
+
+[2025-10-04 13:29:18 #6 type.registry] 
+New type domain.Erreklamazio
+
+[2025-10-04 13:29:18 #7 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-04 13:29:18 #8 type.registry] 
+New type domain.Kotxe
+
+[2025-10-04 13:29:18 #9 type.registry] 
+New type domain.Ride
+
+[2025-10-04 13:29:18 #10 type] 
+Type domain.Mugimendua is not enhanced.
+
+[2025-10-04 13:29:18 #11 type] 
+Type domain.Erreklamazio is not enhanced.
+
+[2025-10-04 13:29:18 #12 type] 
+Type domain.Kotxe is not enhanced.
+
+[2025-10-04 13:29:18 #13 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-04 13:29:18 #14 type.registry] 
+New type domain.Balorazio
+
+[2025-10-04 13:29:18 #15 type.registry] 
+New type domain.Book
+
+[2025-10-04 13:29:18 #16 type] 
+Type domain.Balorazio is not enhanced.
+
+[2025-10-04 13:29:18 #17 type.registry] 
+New type domain.Traveler
+
+[2025-10-04 13:29:18 #18 type] 
+Type domain.Book is not enhanced.
+
+[2025-10-04 13:29:18 #19 type] 
+Type domain.Traveler is not enhanced.
+
+[2025-10-04 13:29:18 #20 type.registry] 
+New type domain.Alerta
+
+[2025-10-04 13:29:18 #21 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-10-04 13:29:18 #22 type.registry] 
+New type domain.Admin
+
+[2025-10-04 13:29:18 #23 type] 
+Type domain.Admin is not enhanced.
+
+[2025-10-04 13:29:18 #24 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-10-04 13:29:18 #25 type.registry] 
+New type java.util.Vector<domain.Erreklamazio>
+
+[2025-10-04 13:29:18 #26 type.registry] 
+New type java.util.Vector<domain.Mugimendua>
+
+[2025-10-04 13:29:18 #27 type.registry] 
+New type java.util.Vector<domain.Book>
+
+[2025-10-04 13:29:18 #28 type.registry] 
+New type java.util.Vector<domain.Alerta>
+
+[2025-10-04 13:29:18 #29 type.registry] 
+New type java.util.Vector<domain.Balorazio>
+
