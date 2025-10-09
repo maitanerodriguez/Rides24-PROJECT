@@ -182,6 +182,7 @@ public class createBalorazioBlackTestBD {
 
             sut.open();
             b = sut.createBalorazio(idBalorazioa, puntuazioa, komentarioa, data, travelerNAN, rideNumber);
+            fail();
             sut.close();
 
             assertNotNull(b);
