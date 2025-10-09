@@ -192,6 +192,7 @@ public class createBalorazioBlackTestBD {
             assertTrue(exist);
             testDA.close();
             
+            
             fail();
         } catch (reviewAlreadyExistsException e) {
         	fail();

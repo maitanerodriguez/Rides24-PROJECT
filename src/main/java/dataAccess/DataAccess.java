@@ -806,6 +806,7 @@ public void open(){
 				return null;
 			}
 			
+			
 			db.getTransaction().begin();
 			Traveler t= db.find(Traveler.class,NAN );
 			Ride r=db.find(Ride.class,rideNumber );
