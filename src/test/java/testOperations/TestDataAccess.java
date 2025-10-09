@@ -9,6 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import configuration.ConfigXML;
+import domain.Balorazio;
 import domain.Book;
 import domain.Driver;
 import domain.Kotxe;
@@ -283,7 +284,100 @@ public class TestDataAccess {
 				return null;
 			}
 		}
+		public Integer addRideNumberWithBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Integer rideNumber, String NAN) {
+			Traveler t = null;
+			Balorazio b = null;
 
+			try {
+				db.getTransaction().begin();
+				t = db.find(Traveler.class, NAN);
+				Ride r = db.find(Ride.class, rideNumber);
 
+				if (t == null || r == null) {
+					db.getTransaction().commit();
+					return null;
+				}
+
+				if (t.balorazioExist(rideNumber)) {
+					db.getTransaction().commit();
+					return null; 
+				}
+
+				b = t.addBalorazio(idBalorazioa, puntuazioa, komentarioa, data, r);
+				r.addBalorazio(b);
+
+				db.persist(t);
+				db.getTransaction().commit();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			return rideNumber;
+		}
+		
+		public Balorazio createBalorazio(Integer idBalorazioa, int puntuazioa, String komentarioa, String data, Ride ride, Traveler traveler) {
+			System.out.println(">> TestDataAccess: createBalorazio");
+			Balorazio balorazio = null;
+				db.getTransaction().begin();
+				try {
+				    balorazio = new Balorazio(idBalorazioa, puntuazioa, komentarioa, data, ride, traveler);
+					db.persist(balorazio);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return balorazio;
+	    }
+	
+		public boolean removeBalorazio(Integer idBalorazioa) {
+			System.out.println(">> TestDataAccess: removeBalorazio");
+			Balorazio b = db.find(Balorazio.class, idBalorazioa);
+			if (b!=null) {
+				db.getTransaction().begin();
+				db.remove(b);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		public boolean existBalorazio(Integer idBalorazio, int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) {
+			System.out.println(">> TestDataAccess: existBalorazio");
+			Traveler t = db.find(Traveler.class, NAN);
+			if (t!=null) {
+				return t.balorazioExist(rideNumber);
+			} else 
+			return false;
+		}
+		public Traveler addTravelerWithAlert(String NAN,String log, String password, String email, String izena,String abizena, String jaiotzeData, int telefonoZenbakia, String sexua, String from, String to,  Date date) {
+			System.out.println(">> TestDataAccess: addTravelerWhitAlert");
+				Traveler traveler=null;
+				db.getTransaction().begin();
+				try {
+					 traveler = db.find(Traveler.class, email);
+					 					 
+					if (traveler==null)
+						traveler=new Traveler(NAN, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
+				    traveler.addAlert(from, to, date);
+				    db.persist(traveler);
+				    System.out.println("Stored: "+traveler);
+					db.getTransaction().commit();
+					return traveler;
+					
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return traveler;
+	    }
+		public boolean existAlert(String NAN, String from, String to, Date date) {
+			System.out.println(">> TestDataAccess: existAlert");
+			Traveler t = db.find(Traveler.class, NAN);
+			if (t!=null) {
+				return t.doesAlertExist(from, to, date);
+			} else 
+			return false;
+		}
 		
 }

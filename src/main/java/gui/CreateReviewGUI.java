@@ -118,7 +118,7 @@ public class CreateReviewGUI extends JFrame {
 			    String dataOrduaFormateatuta=dataOrdua.format(formatoa);
 				try {
 					BLFacade facade=HasierakoGUI.getBusinessLogic();
-					Balorazio balorazio=facade.createBalorazio(puntuazio, deskribapena,dataOrduaFormateatuta,t.getNAN(),r.getRideNumber());
+					Balorazio balorazio=facade.createBalorazio(1, puntuazio, deskribapena,dataOrduaFormateatuta,t.getNAN(),r.getRideNumber());
 					errore.setBounds(116, 195, 317,20);
 					errore.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateReviewGUI.ratingCreated"));
 				}catch(reviewAlreadyExistsException | ratingMoreThanFiveException e1) {

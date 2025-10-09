@@ -802,7 +802,7 @@ public void open(){
 
 		}
 	}
-	public Balorazio createBalorazio(int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException{
+	public Balorazio createBalorazio(Integer idBalorazio, int puntuazioa, String komentarioa, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException{
 		try {
 			db.getTransaction().begin();
 			Traveler t= db.find(Traveler.class,NAN );
@@ -815,7 +815,7 @@ public void open(){
 				db.getTransaction().commit();
 				throw new ratingMoreThanFiveException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ratingMoreThanFiveException"));
 			}
-			Balorazio b=t.addBalorazio(puntuazioa, komentarioa, data, r);
+			Balorazio b=t.addBalorazio(idBalorazio, puntuazioa, komentarioa, data, r);
 			r.addBalorazio(b);
 			db.getTransaction().commit();
 			return b;

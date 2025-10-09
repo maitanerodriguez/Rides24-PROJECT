@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlIDREF;
 public class Traveler extends User implements Serializable {
 	private static final long serialVersionUID = 1L;
 		@XmlIDREF
-		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval=true)
 		private List<Book> books=new Vector<Book>();
 		
 		@XmlIDREF
@@ -120,8 +120,8 @@ public class Traveler extends User implements Serializable {
 		}
 		return false;
 	}
-	public Balorazio addBalorazio(int puntuazio, String komentario, String data, Ride ride) {
-		Balorazio b=new Balorazio(puntuazio, komentario, data, ride, this);
+	public Balorazio addBalorazio(Integer idBalorazio,int puntuazio, String komentario, String data, Ride ride) {
+		Balorazio b=new Balorazio(idBalorazio, puntuazio, komentario, data, ride, this);
 		this.balorazioak.add(b);
 		return b;
 	}

@@ -39,7 +39,7 @@ public class Ride implements Serializable {
 	private Driver driver;  
 	
 	@XmlIDREF
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<Book> books=new Vector<Book>();
 	
 	@XmlIDREF

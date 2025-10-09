@@ -154,7 +154,7 @@ public interface BLFacade  {
 	public void updateLastLogged(String NAN, String lastLogged);
 	
 	@WebMethod
-	public Balorazio createBalorazio(int puntuazio, String komentario, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException;
+	public Balorazio createBalorazio(Integer idBalorazio, int puntuazio, String komentario, String data, String NAN, Integer rideNumber) throws reviewAlreadyExistsException, ratingMoreThanFiveException;
 	
 	@WebMethod
 	public List<Balorazio> getBalorazioak(String NAN);
