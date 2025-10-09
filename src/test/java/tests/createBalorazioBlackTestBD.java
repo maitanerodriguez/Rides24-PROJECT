@@ -1,6 +1,5 @@
 package tests;
 
-
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -26,7 +25,6 @@ public class createBalorazioBlackTestBD {
     static DataAccess sut = new DataAccess();
     static TestDataAccess testDA = new TestDataAccess();
 
-    
     @Test
     public void test1() {
         //Balorazio
