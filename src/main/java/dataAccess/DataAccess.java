@@ -679,7 +679,7 @@ public void open(){
 
 		}
 	}
-	//cambiar metodo
+
 	public void cancelRide(Integer rideNumber, String NAN) {
 		try {
 			db.getTransaction().begin();

@@ -29,6 +29,7 @@ public class createBalorazioWhiteTestBD {
 	static DataAccess sut=new DataAccess();
 	static TestDataAccess testDA=new TestDataAccess();
   
+	
     @Test
     public void test1() {
         //Balorazio
