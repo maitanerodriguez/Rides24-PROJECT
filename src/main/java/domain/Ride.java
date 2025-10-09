@@ -1,5 +1,6 @@
 package domain;
 
+
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -43,11 +44,11 @@ public class Ride implements Serializable {
 	private List<Book> books=new Vector<Book>();
 	
 	@XmlIDREF
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<Balorazio> balorazioak=new Vector<Balorazio>();
 	
 	@XmlIDREF
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<Erreklamazio> erreklamazioak=new Vector<Erreklamazio>();
 	
 	public Ride(){

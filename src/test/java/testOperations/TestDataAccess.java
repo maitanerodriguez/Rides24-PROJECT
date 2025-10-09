@@ -287,6 +287,7 @@ public class TestDataAccess {
 			Ride r = db.find(Ride.class, rideNumber);
 			if (r!=null) {
 				db.getTransaction().begin();
+				r.getBalorazioak().clear();
 				db.remove(r);
 				db.getTransaction().commit();
 				return true;
@@ -328,7 +329,10 @@ public class TestDataAccess {
 				return t.balorazioExist(rideNumber);
 			} else 
 			return false;
-		}	
+		}
+		
+		
+		
 		public boolean removeCarFromDB(String matrikula) {
 			System.out.println(">> TestDataAccess: removeCarFromDB");
 			Kotxe k = db.find(Kotxe.class, matrikula);
@@ -399,4 +403,5 @@ public class TestDataAccess {
 			} else 
 			return false;
 	    }
+		
 }

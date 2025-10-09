@@ -1,5 +1,6 @@
 package dataAccess;
 
+
 import java.io.File;
 
 
@@ -867,4 +868,32 @@ public void open(){
 			db.getTransaction().commit();
 		}
 	}
+	
+	public void removeBalorazio(Integer idBalorazioa) {
+	    try {
+	        db.getTransaction().begin();
+	        Balorazio b = db.find(Balorazio.class, idBalorazioa);
+
+	        if (b != null) {
+	            Ride r = b.getRide();
+	            if (r != null) {
+	                r.getBalorazioak().remove(b);
+	            }
+	            Traveler t = b.getTraveler();
+	            if (t != null) {
+	                t.getBalorazioak().remove(b);
+	            }
+	            db.remove(b);
+	        }
+
+	        db.getTransaction().commit();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        if (db.getTransaction().isActive()) {
+	            db.getTransaction().rollback();
+	        }
+	    }
+	}
+
+
 }

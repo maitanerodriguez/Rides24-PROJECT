@@ -79,4 +79,8 @@ public class Balorazio implements Serializable{
 	public Traveler getTraveler() {
 		return this.traveler;
 	}
+
+	public Integer getId() {
+		return idBalorazioa;
+	}
 }
