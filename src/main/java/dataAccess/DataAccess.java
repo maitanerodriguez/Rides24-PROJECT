@@ -680,7 +680,6 @@ public void open(){
 		}
 	}
 
-	
 	public void cancelRide(Integer rideNumber, String NAN) {
 		try {
 			db.getTransaction().begin();
