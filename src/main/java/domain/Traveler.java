@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlIDREF;
 public class Traveler extends User implements Serializable {
 	private static final long serialVersionUID = 1L;
 		@XmlIDREF
-		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval=true)
+		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 		private List<Book> books=new Vector<Book>();
 		
 		@XmlIDREF
@@ -120,11 +120,7 @@ public class Traveler extends User implements Serializable {
 		}
 		return false;
 	}
-<<<<<<< HEAD
-	public Balorazio addBalorazio(Integer idBalorazio,int puntuazio, String komentario, String data, Ride ride) {
-=======
 	public Balorazio addBalorazio(Integer idBalorazio, int puntuazio, String komentario, String data, Ride ride) {
->>>>>>> 86c3915c58355aa4f81d424c98af32d64bc5300c
 		Balorazio b=new Balorazio(idBalorazio, puntuazio, komentario, data, ride, this);
 		this.balorazioak.add(b);
 		return b;
@@ -132,9 +128,8 @@ public class Traveler extends User implements Serializable {
 	public List<Balorazio> getBalorazioak(){
 		return this.balorazioak;
 	}
-	public Book removeBook(Book b) {
+	public void removeBook(Book b) {
 		this.getBookListb().remove(b);
-		return b;
 	}
 	public void removeBooks() {
 		for(Book b: books){
@@ -147,25 +142,6 @@ public class Traveler extends User implements Serializable {
 			
 		}
 	}
-	public Book removeBookWithRideID(Integer rideNumber) {
-		int i=0;
-		int indizea=0;
-		Book book=null;
-		Boolean aurkitua=false;
-		for(Book b: books) {
-			Ride r= b.getRide();
-			if(r.getRideNumber()==rideNumber) {
-				book=b;
-				indizea=i;
-				aurkitua=true;
-			}
-			i++;
-		}
-		if(aurkitua==true) {
-			books.remove(indizea);
-		}
-		return book;
-	}
 	public void removeBalorazioak() {
 		for(Balorazio b: balorazioak) {
 			Ride r=b.getRide();
@@ -176,7 +152,6 @@ public class Traveler extends User implements Serializable {
 	public void removeReview(Balorazio b) {
 		this.balorazioak.remove(b);
 	}
-	
 	/**
 	public void removeAlerts() {
 		for(Alerta a: alertak) {

@@ -342,11 +342,5 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 	}
 
-	@Override
-	public Balorazio createBalorazio(int puntuazio, String komentario, String data, String NAN, Integer rideNumber)
-			throws reviewAlreadyExistsException, ratingMoreThanFiveException {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
 
