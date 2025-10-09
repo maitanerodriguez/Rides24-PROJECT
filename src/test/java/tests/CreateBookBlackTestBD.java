@@ -117,11 +117,12 @@ public class CreateBookBlackTestBD {
 			fail();
 		}finally {
 			testDA.open();
-			//testDA.removeRideFromDB(rideNumber);
-			testDA.removeCarFromDB(matrikula);
+			testDA.removeTraveler(NANT); //erreserba eta traveler kentzen dira
+			testDA.removeRideFromDB(rideNumber);
 			testDA.removeDriver(NAND);
-			testDA.removeTraveler(NANT);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();
+			
 		}
 	}
 	@Test
@@ -188,8 +189,9 @@ public class CreateBookBlackTestBD {
 		}finally {
 			sut.close();
 			testDA.open();
-			//testDA.removeCarFromDB(matrikula);
+			testDA.removeRideFromDB(rideNumber);
 			testDA.removeDriver(NAND);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();   
 			
 		}
@@ -263,11 +265,12 @@ public class CreateBookBlackTestBD {
 			fail();
 		}finally {
 			testDA.open();
-			//testDA.removeRideFromDB(rideNumber);
-			testDA.removeCarFromDB(matrikula);
+			testDA.removeTraveler(NANT); //erreserba eta traveler kentzen dira
+			testDA.removeRideFromDB(rideNumber);
 			testDA.removeDriver(NAND);
-			testDA.removeTraveler(NANT);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();
+			
 		}
 	}
 	@Test
@@ -319,7 +322,7 @@ public class CreateBookBlackTestBD {
 			testDA.close();
 			
 			sut.open();
-			Book b= sut.createBook(NANT, rideNumber, -1);
+			Book b= sut.createBook(NANT, rideNumber,-1);
 			sut.close();
 			System.out.println(b);
 			assertNotNull(b);
@@ -339,11 +342,12 @@ public class CreateBookBlackTestBD {
 			fail();
 		}finally {
 			testDA.open();
-			//testDA.removeRideFromDB(rideNumber);
-			testDA.removeCarFromDB(matrikula);
+			testDA.removeTraveler(NANT); //erreserba eta traveler kentzen dira
+			testDA.removeRideFromDB(rideNumber);
 			testDA.removeDriver(NAND);
-			testDA.removeTraveler(NANT);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();
+			
 		}
 	}
 	@Test
@@ -446,7 +450,7 @@ public class CreateBookBlackTestBD {
 			//Kotxe k= new Kotxe(matrikula,marka,modeloa,eserlekuKopurua, d);
 			//Integer rideNumber, String from, String to, Date date, int nPlaces, float price, Driver driver, Kotxe k
 			testDA.open();
-			Traveler t= testDA.createTraveler(NANT, log1, password1, email1, izena1, abizena1, jaiotzeData1, telefonoZenbakia1, sexua1);
+			Traveler t= testDA.createTraveler(NANT, log1, password1, email1, izena1, abizena1, jaiotzeData1,telefonoZenbakia1, sexua1);
 			Driver d=testDA.createDriver(NAND, log, password, email, izena, abizena, jaiotzeData, telefonoZenbakia, sexua);
 			Kotxe k=testDA.createKotxe(matrikula, marka, modeloa, eserlekuKopurua, d);
 			Ride r=testDA.createRide(rideNumber, rideFrom, rideTo, rideDate, 5 ,0 , d, k);
@@ -468,8 +472,10 @@ public class CreateBookBlackTestBD {
 		}finally {
 			sut.close();
 			testDA.open();
-			//testDA.removeCarFromDB(matrikula);
-			testDA.removeTraveler(NANT);
+			testDA.removeTraveler(NANT); //erreserba eta traveler kentzen dira
+			testDA.removeRideFromDB(rideNumber);
+			testDA.removeDriver(NAND);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();   
 			
 		}
@@ -544,8 +550,10 @@ public class CreateBookBlackTestBD {
 		}finally {
 			sut.close();
 			testDA.open();
-			//testDA.removeCarFromDB(matrikula);
-			testDA.removeTraveler(NANT);
+			testDA.removeTraveler(NANT); //erreserba eta traveler kentzen dira
+			testDA.removeRideFromDB(rideNumber);
+			testDA.removeDriver(NAND);
+			testDA.removeCarFromDB(matrikula);
 			testDA.close();   
 			
 		}

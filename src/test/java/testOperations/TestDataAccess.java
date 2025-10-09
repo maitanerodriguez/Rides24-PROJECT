@@ -85,6 +85,7 @@ public class TestDataAccess {
 		Ride r = db.find(Ride.class, rideNumber);
 		if (r!=null) {
 			db.getTransaction().begin();
+			r.getBookList().clear();
 			db.remove(r);
 			db.getTransaction().commit();
 			return true;
